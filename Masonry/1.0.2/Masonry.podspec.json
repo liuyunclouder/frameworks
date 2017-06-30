@@ -1,0 +1,48 @@
+{
+ "requires_arc": true, 
+ "osx": {
+  "frameworks": [
+   "Foundation", 
+   "AppKit"
+  ]
+ }, 
+ "public_header_files": "Masonry/*.h", 
+ "wc_prefix_source": {
+  "git": "https://github.com/cloudkite/Masonry.git", 
+  "tag": "v1.0.2"
+ }, 
+ "tvos": {
+  "frameworks": [
+   "Foundation", 
+   "UIKit"
+  ]
+ }, 
+ "name": "Masonry", 
+ "license": "MIT", 
+ "platforms": {
+  "osx": "10.7", 
+  "tvos": "9.0", 
+  "ios": "6.0"
+ }, 
+ "wc_prefix_source_files": "Masonry/*.{h,m}", 
+ "source_files": "Masonry/*.h", 
+ "ios": {
+  "frameworks": [
+   "Foundation", 
+   "UIKit"
+  ]
+ }, 
+ "summary": "Harness the power of Auto Layout NSLayoutConstraints with a simplified, chainable and expressive syntax.", 
+ "source": {
+  "http": "https://raw.githubusercontent.com/liuyunclouder/frameworks/master/Masonry/1.0.2/Masonry.zip"
+ }, 
+ "version": "1.0.2", 
+ "authors": {
+  "Jonas Budelmann": "jonas.budelmann@gmail.com"
+ }, 
+ "vendored_libraries": "Masonry/libMasonry.a", 
+ "preserve_paths": "Masonry/*", 
+ "social_media_url": "http://twitter.com/cloudkite", 
+ "homepage": "https://github.com/cloudkite/Masonry", 
+ "description": "Masonry is a light-weight layout framework which wraps AutoLayout with a nicer syntax.\nMasonry has its own layout DSL which provides a chainable way of describing your\nNSLayoutConstraints which results in layout code which is more concise and readable.\n   Masonry supports iOS and Mac OSX."
+}
