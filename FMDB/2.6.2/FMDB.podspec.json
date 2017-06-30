@@ -1,0 +1,82 @@
+{
+ "public_header_files": "FMDB/*.h", 
+ "wc_prefix_source": {
+  "git": "https://github.com/ccgus/fmdb.git", 
+  "tag": "2.6.2"
+ }, 
+ "default_subspecs": "standard", 
+ "name": "FMDB", 
+ "license": "MIT", 
+ "requires_arc": true, 
+ "source_files": "FMDB/*.h", 
+ "summary": "A Cocoa / Objective-C wrapper around SQLite.", 
+ "source": {
+  "http": "https://raw.githubusercontent.com/liuyunclouder/frameworks/master/FMDB/2.6.2/FMDB.zip"
+ }, 
+ "version": "2.6.2", 
+ "authors": {
+  "August Mueller": "gus@flyingmeat.com"
+ }, 
+ "platforms": {
+  "watchos": null, 
+  "osx": null, 
+  "tvos": null, 
+  "ios": null
+ }, 
+ "vendored_libraries": "FMDB/libFMDB.a", 
+ "homepage": "https://github.com/ccgus/fmdb", 
+ "subspecs": [
+  {
+   "libraries": "sqlite3", 
+   "exclude_files": "src/fmdb.m", 
+   "name": "standard", 
+   "source_files": "src/fmdb/FM*.{h,m}"
+  }, 
+  {
+   "dependencies": {
+    "FMDB/standard": []
+   }, 
+   "name": "FTS", 
+   "source_files": "src/extra/fts3/*.{h,m}"
+  }, 
+  {
+   "xcconfig": {
+    "OTHER_CFLAGS": "$(inherited) -DFMDB_SQLITE_STANDALONE"
+   }, 
+   "name": "standalone", 
+   "subspecs": [
+    {
+     "exclude_files": "src/fmdb.m", 
+     "dependencies": {
+      "sqlite3": []
+     }, 
+     "name": "default", 
+     "source_files": "src/fmdb/FM*.{h,m}"
+    }, 
+    {
+     "exclude_files": "src/fmdb.m", 
+     "name": "FTS", 
+     "dependencies": {
+      "sqlite3/fts": []
+     }, 
+     "source_files": [
+      "src/fmdb/FM*.{h,m}", 
+      "src/extra/fts3/*.{h,m}"
+     ]
+    }
+   ]
+  }, 
+  {
+   "exclude_files": "src/fmdb.m", 
+   "dependencies": {
+    "SQLCipher": []
+   }, 
+   "name": "SQLCipher", 
+   "xcconfig": {
+    "OTHER_CFLAGS": "$(inherited) -DSQLITE_HAS_CODEC -DHAVE_USLEEP=1"
+   }, 
+   "source_files": "src/fmdb/FM*.{h,m}"
+  }
+ ], 
+ "preserve_paths": "FMDB/*"
+}
