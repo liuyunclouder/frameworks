@@ -1,0 +1,25 @@
+{
+ "requires_arc": true, 
+ "public_header_files": "JRSwizzle/*.h", 
+ "wc_prefix_source": {
+  "git": "https://github.com/rentzsch/jrswizzle.git", 
+  "tag": "v1.0"
+ }, 
+ "name": "JRSwizzle", 
+ "license": "MIT", 
+ "frameworks": "Foundation", 
+ "wc_prefix_source_files": "*.{h,m}", 
+ "source_files": "JRSwizzle/*.h", 
+ "summary": "one-stop-shop for all your method swizzling needs.", 
+ "source": {
+  "http": "https://raw.githubusercontent.com/liuyunclouder/frameworks/master/JRSwizzle/1.0/JRSwizzle.zip"
+ }, 
+ "version": "1.0", 
+ "authors": {
+  "Jonathan 'Wolf' Rentzsch": "jwr.git@redshed.net"
+ }, 
+ "vendored_libraries": "JRSwizzle/libJRSwizzle.a", 
+ "preserve_paths": "JRSwizzle/*", 
+ "homepage": "https://github.com/rentzsch/jrswizzle", 
+ "description": "JRSwizzle is source code package that offers a single, easy, correct+consistent interface for exchanging Objective-C method implementations (\"method swizzling\") across many versions of Mac OS X, iOS, Objective-C and runtime architectures."
+}
