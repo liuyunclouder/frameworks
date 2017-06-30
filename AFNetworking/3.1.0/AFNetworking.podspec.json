@@ -14,7 +14,7 @@
  "summary": "A delightful iOS and OS X networking framework.", 
  "wc_prefix_public_header_files": "AFNetworking/AFNetworking.h", 
  "source": {
-  "http": "https://raw.githubusercontent.com/liuyunclouder/frameworks/master/AFNetworking.zip"
+  "http": "https://raw.githubusercontent.com/liuyunclouder/frameworks/master/AFNetworking/3.1.0/AFNetworking.zip"
  }, 
  "version": "3.1.0", 
  "authors": {
