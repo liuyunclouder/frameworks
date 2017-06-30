@@ -1,0 +1,108 @@
+{
+ "public_header_files": "AFNetworking/*.h", 
+ "prefix_header_contents": "#ifndef TARGET_OS_IOS\n  #define TARGET_OS_IOS TARGET_OS_IPHONE\n#endif\n\n#ifndef TARGET_OS_WATCH\n  #define TARGET_OS_WATCH 0\n#endif\n\n#ifndef TARGET_OS_TV\n  #define TARGET_OS_TV 0\n#endif", 
+ "name": "AFNetworking", 
+ "license": "MIT", 
+ "requires_arc": true, 
+ "wc_prefix_source_files": "AFNetworking/AFNetworking.h", 
+ "wc_prefix_source": {
+  "git": "https://github.com/AFNetworking/AFNetworking.git", 
+  "tag": "3.1.0", 
+  "submodules": true
+ }, 
+ "source_files": "AFNetworking/*.h", 
+ "summary": "A delightful iOS and OS X networking framework.", 
+ "wc_prefix_public_header_files": "AFNetworking/AFNetworking.h", 
+ "source": {
+  "http": "https://raw.githubusercontent.com/liuyunclouder/frameworks/master/AFNetworking.podspec.json"
+ }, 
+ "version": "3.1.0", 
+ "authors": {
+  "Mattt Thompson": "m@mattt.me"
+ }, 
+ "platforms": {
+  "watchos": "2.0", 
+  "osx": "10.9", 
+  "tvos": "9.0", 
+  "ios": "7.0"
+ }, 
+ "vendored_libraries": "AFNetworking/libAFNetworking.a", 
+ "social_media_url": "https://twitter.com/AFNetworking", 
+ "homepage": "https://github.com/AFNetworking/AFNetworking", 
+ "subspecs": [
+  {
+   "osx": {
+    "frameworks": "CoreServices"
+   }, 
+   "public_header_files": "AFNetworking/AFURL{Request,Response}Serialization.h", 
+   "name": "Serialization", 
+   "watchos": {
+    "frameworks": [
+     "MobileCoreServices", 
+     "CoreGraphics"
+    ]
+   }, 
+   "ios": {
+    "frameworks": [
+     "MobileCoreServices", 
+     "CoreGraphics"
+    ]
+   }, 
+   "source_files": "AFNetworking/AFURL{Request,Response}Serialization.{h,m}"
+  }, 
+  {
+   "frameworks": "Security", 
+   "public_header_files": "AFNetworking/AFSecurityPolicy.h", 
+   "name": "Security", 
+   "source_files": "AFNetworking/AFSecurityPolicy.{h,m}"
+  }, 
+  {
+   "platforms": {
+    "osx": "10.9", 
+    "tvos": "9.0", 
+    "ios": "7.0"
+   }, 
+   "public_header_files": "AFNetworking/AFNetworkReachabilityManager.h", 
+   "frameworks": "SystemConfiguration", 
+   "name": "Reachability", 
+   "source_files": "AFNetworking/AFNetworkReachabilityManager.{h,m}"
+  }, 
+  {
+   "osx": {
+    "dependencies": {
+     "AFNetworking/Reachability": []
+    }
+   }, 
+   "public_header_files": "AFNetworking/AF{URL,HTTP}SessionManager.h", 
+   "tvos": {
+    "dependencies": {
+     "AFNetworking/Reachability": []
+    }
+   }, 
+   "name": "NSURLSession", 
+   "ios": {
+    "dependencies": {
+     "AFNetworking/Reachability": []
+    }
+   }, 
+   "dependencies": {
+    "AFNetworking/Serialization": [], 
+    "AFNetworking/Security": []
+   }, 
+   "source_files": "AFNetworking/AF{URL,HTTP}SessionManager.{h,m}"
+  }, 
+  {
+   "platforms": {
+    "tvos": "9.0", 
+    "ios": "7.0"
+   }, 
+   "public_header_files": "UIKit+AFNetworking/*.h", 
+   "dependencies": {
+    "AFNetworking/NSURLSession": []
+   }, 
+   "name": "UIKit", 
+   "source_files": "UIKit+AFNetworking"
+  }
+ ], 
+ "preserve_paths": "AFNetworking/*"
+}
