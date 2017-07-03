@@ -1,0 +1,40 @@
+{
+ "requires_arc": true, 
+ "public_header_files": "SCSiriWaveformView/*.h", 
+ "wc_prefix_source": {
+  "git": "https://github.com/stefanceriu/SCSiriWaveformView.git", 
+  "tag": "v1.1.1"
+ }, 
+ "name": "SCSiriWaveformView", 
+ "license": {
+  "type": "MIT License", 
+  "file": "LICENSE"
+ }, 
+ "source": {
+  "http": "https://raw.githubusercontent.com/liuyunclouder/frameworks/master/SCSiriWaveformView/1.1.1/SCSiriWaveformView.zip"
+ }, 
+ "wc_prefix_source_files": "SCSiriWaveformView/*", 
+ "screenshots": [
+  "https://drive.google.com/uc?export=download&id=0ByLCkUO90ltoSVloLXRKSC1DbEk"
+ ], 
+ "source_files": "SCSiriWaveformView/*.h", 
+ "summary": "UIView subclass that reproduces the waveform effect seen in Siri on iOS 7", 
+ "platforms": {
+  "ios": "7.0"
+ }, 
+ "version": "1.1.1", 
+ "frameworks": [
+  "UIKit", 
+  "QuartzCore", 
+  "CoreGraphics", 
+  "Foundation", 
+  "AVFoundation"
+ ], 
+ "authors": {
+  "Stefan Ceriu": "stefan.ceriu@yahoo.com"
+ }, 
+ "vendored_libraries": "SCSiriWaveformView/libSCSiriWaveformView.a", 
+ "social_media_url": "https://twitter.com/stefanceriu", 
+ "homepage": "https://github.com/stefanceriu/SCSiriWaveformView", 
+ "preserve_paths": "SCSiriWaveformView/*"
+}
