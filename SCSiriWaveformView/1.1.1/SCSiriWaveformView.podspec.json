@@ -6,10 +6,6 @@
   "tag": "v1.1.1"
  }, 
  "name": "SCSiriWaveformView", 
- "license": {
-  "type": "MIT License", 
-  "file": "LICENSE"
- }, 
  "source": {
   "http": "https://raw.githubusercontent.com/liuyunclouder/frameworks/master/SCSiriWaveformView/1.1.1/SCSiriWaveformView.zip"
  }, 
